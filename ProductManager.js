@@ -129,16 +129,16 @@ class ProductManager{
 
 const manager = new ProductManager("./products.json");
 
-const funcionPrincipal = async()=>{
+const principalFunction = async()=>{
 try {
-    // const productAdded = await manager.addProduct({title:"silla", description:"silla gamer", price: 79990, thumbnail:"https://sodimac.scene7.com/is/image/SodimacCL/5967791_01?wid=1500&hei=1500&qlt=70", code:"aaa987", stock: 55});
+    const productAdded = await manager.addProduct({title:"silla", description:"silla gamer", price: 79990, thumbnail:"https://sodimac.scene7.com/is/image/SodimacCL/5967791_01?wid=1500&hei=1500&qlt=70", code:"aaa987", stock: 55});
     // console.log("productAdded ", productAdded);
-    // const product1 = await manager.getProductById(8);
+    const product1 = await manager.getProductById(2);
     // console.log("product ", product1);
-    // const resultado = await manager.updateProducts(1, {price:26990});
-    // const showProducts = await manager.getProducts();
+    const resultado = await manager.updateProducts(1, {price:26990});
+    const showProducts = await manager.getProducts();
     // console.log("showProducts: " , showProducts);
-    // const deleteProduct = await manager.deleteProducts(4);
+    const deleteProduct = await manager.deleteProducts(4);
     // console.log("deleteProduct ", deleteProduct);
 } catch (error) {
     console.log(error.message);
@@ -146,5 +146,5 @@ try {
 }
 
 
-funcionPrincipal();
+principalFunction();
 
